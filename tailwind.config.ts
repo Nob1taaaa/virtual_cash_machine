@@ -57,6 +57,8 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "atm-glow": "hsl(var(--atm-glow))",
+        "atm-screen": "hsl(var(--atm-screen))",
       },
       borderRadius: {
         lg: "var(--radius)",
