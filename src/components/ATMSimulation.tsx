@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Wallet, ArrowUpCircle, ArrowDownCircle, RotateCcw, Sparkles, Heart } from "lucide-react";
+import { Wallet, ArrowUpCircle, ArrowDownCircle, RotateCcw, Sparkles } from "lucide-react";
 import { soundEffects } from "@/utils/soundEffects";
 import Confetti from "@/components/Confetti";
+import bankLogo from "@/assets/bank-logo.png";
 
 const ATMSimulation = () => {
   const [balance, setBalance] = useState(1000);
@@ -127,7 +128,7 @@ const ATMSimulation = () => {
             <div className="flex items-center justify-center gap-3 mb-6 animate-bounce-in">
               <Wallet className="w-8 h-8 text-primary animate-pulse" />
               <h1 className="text-3xl font-bold atm-glow-text">ATM Simulation</h1>
-              <Heart className="w-6 h-6 text-pink-400 animate-pulse" fill="currentColor" />
+              <img src={bankLogo} alt="Bank Logo" className="w-10 h-10 animate-pulse" />
             </div>
 
             <div className="bg-[hsl(var(--atm-screen))] rounded-xl p-6 mb-6 min-h-[100px] flex items-center justify-center border-2 border-primary/30 relative overflow-hidden">

@@ -1,7 +1,7 @@
 import ATMSimulation from "@/components/ATMSimulation";
 
-const Index = () => {
+function Index() {
   return <ATMSimulation />;
-};
+}
 
 export default Index;

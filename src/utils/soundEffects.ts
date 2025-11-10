@@ -1,4 +1,3 @@
-// Sound effects using Web Audio API
 class SoundEffects {
   private audioContext: AudioContext | null = null;
 
@@ -28,42 +27,35 @@ class SoundEffects {
   }
 
   success() {
-    // Happy ascending tones
-    setTimeout(() => this.playTone(523.25, 0.1), 0);    // C5
-    setTimeout(() => this.playTone(659.25, 0.1), 100);  // E5
-    setTimeout(() => this.playTone(783.99, 0.15), 200); // G5
+    setTimeout(() => this.playTone(523.25, 0.1), 0);
+    setTimeout(() => this.playTone(659.25, 0.1), 100);
+    setTimeout(() => this.playTone(783.99, 0.15), 200);
   }
 
   deposit() {
-    // Cash register "cha-ching" effect
     setTimeout(() => this.playTone(880, 0.08), 0);
     setTimeout(() => this.playTone(1046.5, 0.12), 80);
   }
 
   withdraw() {
-    // Quick beeps for withdrawal
     setTimeout(() => this.playTone(659.25, 0.1), 0);
     setTimeout(() => this.playTone(523.25, 0.1), 100);
   }
 
   error() {
-    // Descending error tone
     setTimeout(() => this.playTone(392, 0.15), 0);
     setTimeout(() => this.playTone(329.63, 0.2), 150);
   }
 
   click() {
-    // Subtle click sound
     this.playTone(800, 0.05, 'square');
   }
 
   balance() {
-    // Notification beep
     this.playTone(1046.5, 0.1);
   }
 
   reset() {
-    // Reset chime
     setTimeout(() => this.playTone(523.25, 0.08), 0);
     setTimeout(() => this.playTone(659.25, 0.08), 80);
     setTimeout(() => this.playTone(523.25, 0.12), 160);
