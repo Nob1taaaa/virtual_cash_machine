@@ -128,7 +128,13 @@ const ATMSimulation = () => {
             <div className="flex items-center justify-center gap-3 mb-6 animate-bounce-in">
               <Wallet className="w-8 h-8 text-primary animate-pulse" />
               <h1 className="text-3xl font-bold atm-glow-text">ATM Simulation</h1>
-              <img src={bankLogo} alt="Bank Logo" className="w-10 h-10 animate-pulse" />
+              <div className="relative">
+                <img 
+                  src={bankLogo} 
+                  alt="Bank Logo" 
+                  className="w-16 h-16 animate-pulse drop-shadow-[0_0_15px_rgba(0,255,170,0.7)] hover:scale-110 transition-transform rounded-lg bg-secondary/20 p-2 border-2 border-primary/40" 
+                />
+              </div>
             </div>
 
             <div className="bg-[hsl(var(--atm-screen))] rounded-xl p-6 mb-6 min-h-[100px] flex items-center justify-center border-2 border-primary/30 relative overflow-hidden">
