@@ -19,7 +19,7 @@ A browser-based ATM simulator built with React, TypeScript, and Vite. It walks t
 
 ## Getting started
 
-Requires Node.js 18 or newer.
+Requires Node.js and npm.
 
 ```bash
 npm install
