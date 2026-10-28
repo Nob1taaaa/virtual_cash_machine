@@ -1,65 +1,48 @@
 # Virtual Cash Machine
 
-## Project Info
+A browser-based ATM simulator built with React, TypeScript, and Vite. It walks through the full ATM flow: PIN login, balance checks, deposits, withdrawals, quick cash, transaction history, and printable receipts.
 
-This is a self-developed project created from scratch and maintained personally.
+## Features
 
-## How can I edit this code?
+- **PIN login** with an on-screen keypad
+- **Balance** view and **deposit** / **withdrawal** flows
+- **Quick cash** presets for common amounts
+- **Transaction history** for the session
+- **Receipts** generated for each transaction
+- Sound effects and a confetti celebration on successful actions
 
-You can edit and run this application using your preferred development tools.
+## Tech stack
 
-**Using your IDE**
+- [React](https://react.dev) with [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vite.dev) for development and builds
+- [Tailwind CSS](https://tailwindcss.com) and [shadcn/ui](https://ui.shadcn.com) components
 
-To work locally:
+## Getting started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Requires Node.js 18 or newer.
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open the URL Vite prints, usually <http://localhost:8080>.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts
 
-**Use GitHub Codespaces**
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project structure
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project using your preferred static hosting provider (such as Vercel, Netlify, Github Pages, etc.). Follow their documentation for deploying a Vite + React project.
-
-## Can I connect a custom domain?
-
-Yes, you can!
-
-If you're hosting on a platform that supports custom domains, refer to their documentation on how to configure your domain.
+```
+src/
+├── components/   ATM screens (PIN login, quick cash, transaction history) and UI primitives
+├── pages/        Route pages
+├── utils/        Receipt generation and sound effects
+└── hooks/        Shared React hooks
+```
